@@ -1,5 +1,11 @@
 from litestar import Litestar, get
 
+
+@get("/")
+async def index() -> str:
+    return "Apology API live and ready!"
+
+
 # Define the apology endpoint
 @get("/apology")
 async def apology_endpoint() -> dict:
